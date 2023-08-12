@@ -1,0 +1,4 @@
+[2023-08-12 00:04] [31m[error][0m init_mysql.go:49 gvd_server/core.InitMysql [root:123456@tcp(127.0.0.1:3307)/docs_db?charset=uft8mb4&parseTime=True&loc=Local] mysql connet failed
+[2023-08-12 00:04] [31m[error][0m init_mysql.go:49 gvd_server/core.InitMysql [root:123456@tcp(127.0.0.1:3307)/docs_db?charset=uft8mb4&parseTime=True&loc=Local] mysql connet failed
+[2023-08-12 00:07] [31m[error][0m init_mysql.go:49 gvd_server/core.InitMysql [root:123456@tcp(127.0.0.1:3307)/gvd_db?charset=uft8mb4&parseTime=True&loc=Local] mysql connet failed err:Error 1115 (42000): Unknown character set: 'uft8mb4'
+[2023-08-12 15:44] [31m[error][0m init_mysql.go:49 gvd_server/core.InitMysql [root:123456@tcp(127.0.0.1:3307)/gvd_db?charset=utf8mb4&parseTime=True&loc=Local] mysql connet failed err:dial tcp 127.0.0.1:3307: connectex: No connection could be made because the target machine actively refused it.
