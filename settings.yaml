@@ -16,3 +16,7 @@ redis:
   port: 6379
   password: ""
   poolSize: 100
+jwt:
+  expires: 8 #过期时间，单位小时
+  issuer: "zengxixi"
+  secret: "Js*k$pNh"

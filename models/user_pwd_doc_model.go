@@ -1,3 +1,7 @@
 package models
 
-type
+type UserPwdDocModel struct {
+	Model
+	UserID uint `gorm:"userID"json:"userID"`
+	DocID  uint `gorm:"docID" json:"docID"`
+}

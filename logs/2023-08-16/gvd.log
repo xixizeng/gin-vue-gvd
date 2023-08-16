@@ -1,0 +1,17 @@
+[2023-08-16 10:44] [36m[info][0m main.go:31 main.main xxx
+[2023-08-16 10:44] [31m[error][0m main.go:32 main.main test
+[2023-08-16 10:47] [31m[error][0m main.go:27 main.main yyy
+[2023-08-16 10:47] [36m[info][0m main.go:29 main.main yyy
+[2023-08-16 10:47] [31m[error][0m main.go:30 main.main yyy
+[2023-08-16 10:47] [36m[info][0m main.go:31 main.main xxx
+[2023-08-16 10:47] [31m[error][0m main.go:32 main.main test
+[2023-08-16 10:47] [31m[error][0m main.go:27 main.main yyy
+[2023-08-16 10:47] [36m[info][0m main.go:29 main.main yyy
+[2023-08-16 10:47] [31m[error][0m main.go:30 main.main yyy
+[2023-08-16 10:47] [36m[info][0m main.go:31 main.main xxx
+[2023-08-16 10:47] [31m[error][0m main.go:32 main.main test
+[2023-08-16 10:47] [31m[error][0m main.go:27 main.main yyy
+[2023-08-16 10:47] [36m[info][0m main.go:29 main.main yyy
+[2023-08-16 10:47] [31m[error][0m main.go:30 main.main yyy
+[2023-08-16 10:47] [36m[info][0m main.go:31 main.main xxx
+[2023-08-16 10:47] [31m[error][0m main.go:32 main.main test

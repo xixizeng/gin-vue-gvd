@@ -45,7 +45,6 @@ func (hook ErrorHook) Fire(entry *logrus.Entry) (err error) {
 	//判断日期是否为当前日期
 	if hook.fileDate == timer {
 		hook.file.Write([]byte(line))
-		fmt.Println("这是一次>>>>>>>>>>>>>>")
 		return nil
 	}
 	hook.file.Close()
@@ -84,6 +83,7 @@ func (hook DateHook) Fire(entry *logrus.Entry) (err error) {
 	}
 	hook.file.Close()
 	//重新创建文件目录
+	fmt.Println("look here >>>", path.Join(hook.logPath, timer))
 	os.MkdirAll(path.Join(hook.logPath, timer), os.ModeAppend)
 	filePath := path.Join(hook.logPath, timer, hook.appName+".log")
 
@@ -171,11 +171,28 @@ func NewLog(requestList ...LogRequest) *logrus.Logger {
 }
 
 // 定义全局的logrus
-func InitDefaultLogger() {
+func InitDefaultLogger(requestList ...LogRequest) {
+	var request LogRequest
+	if len(requestList) > 0 {
+		request = requestList[0]
+	}
+	if request.LogPath == "" {
+		request.LogPath = "logs"
+	}
+	if request.AppName == "" {
+		request.AppName = "gvd"
+	}
+
 	logrus.SetOutput(os.Stdout)          //设置输出类型
 	logrus.SetReportCaller(true)         //开启返回函数名和行号
 	logrus.SetFormatter(&LogFormatter{}) //设置自己定义的Formatter
 	logrus.SetLevel(logrus.DebugLevel)   //设置最低的Level
-	logrus.AddHook(&DateHook{})          //选择日志输出的方式
-	logrus.AddHook(&ErrorHook{})         //将error另外加载写在下面，每天第一个错误是error就不会报错
+	logrus.AddHook(&DateHook{
+		logPath: request.LogPath,
+		appName: request.AppName,
+	}) //选择日志输出的方式
+	logrus.AddHook(&ErrorHook{
+		logPath: request.LogPath,
+		appName: request.AppName,
+	}) //将error另外加载写在下面，每天第一个错误是error就不会报错
 }

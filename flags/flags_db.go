@@ -17,6 +17,10 @@ func DB() {
 		&models.DocModel{},
 		&models.UserCollDocModel{}, //tags表应在最后生成，否则部分column将被覆盖
 		&models.RoleDocModel{},
+		&models.ImageModel{},
+		&models.UserPwdDocModel{},
+		&models.LoginModel{},
+		&models.DocDataModel{},
 	)
 	if err != nil {
 		logrus.Fatal("created database autoMigrate failed")
